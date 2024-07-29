@@ -29,6 +29,17 @@ const Dashboard = () => {
         console.error("There was an error fetching the data!", error);
       });
   }, []);
+  useEffect(() => {
+    axios
+      .get("https://data-visualization-dashboardbackend-gzlx56w91.vercel.app/api/get/insights")
+      .then((response) => {
+        // setData(response.data);
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
+  }, []);
 
   return (
     <div className="p-6">
