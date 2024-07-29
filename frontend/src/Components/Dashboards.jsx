@@ -19,22 +19,24 @@ const Dashboard = () => {
     // Add other filters as needed
   });
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/api/get/insights")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the data!", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/api/get/insights")
+  //     .then((response) => {
+  //       setData(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("There was an error fetching the data!", error);
+  //     });
+  // }, []);
+
+
   useEffect(() => {
     axios
       .get("https://data-visualization-dashboardbackend-gzlx56w91.vercel.app/api/get/insights")
       .then((response) => {
         // setData(response.data);
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the data!", error);
