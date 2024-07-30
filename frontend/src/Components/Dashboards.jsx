@@ -21,7 +21,11 @@ const Dashboard = () => {
 
   // useEffect(() => {
   //   axios
-  //     .get("http://localhost:3001/api/get/insights")
+  //     .get("http://localhost:3001/api/get/insights", {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     })
   //     .then((response) => {
   //       setData(response.data);
   //     })
@@ -30,12 +34,18 @@ const Dashboard = () => {
   //     });
   // }, []);
 
-
   useEffect(() => {
     axios
-      .get("https://data-visualization-dashboardbackend-gzlx56w91.vercel.app/api/get/insights")
+      .get(
+        "https://data-visualization-dashboardbackend-gzlx56w91.vercel.app/api/get/insights",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((response) => {
-        // setData(response.data);
+        setData(response.data);
         console.log(response.data);
       })
       .catch((error) => {

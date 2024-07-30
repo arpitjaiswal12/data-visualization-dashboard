@@ -11,9 +11,9 @@ app.use(
     origin: "*",
     credentials: true,
   })
-);
+);//imp
 app.use(bodyParser.json());
-app.use(express.urlencoded({extended : false}))
+app.use(express.urlencoded({extended : false})) // imp
 
 const PORT = process.env.PORT || 5001;
 
