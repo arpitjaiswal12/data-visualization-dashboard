@@ -13,6 +13,7 @@ app.use(
   })
 );
 app.use(bodyParser.json());
+app.use(express.urlencoded({extended : false}))
 
 const PORT = process.env.PORT || 5001;
 
